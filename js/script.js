@@ -195,15 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 ]
             },
-            {
-                "featureType": "road.highway",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
+
             {
                 "featureType": "road.highway.controlled_access",
                 "elementType": "geometry",
@@ -228,24 +220,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 "stylers": [
                     {
                         "color": "#fdfcf8"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.arterial",
-                "elementType": "labels",
-                "stylers": [
-                    {
-                        "visibility": "off"
-                    }
-                ]
-            },
-            {
-                "featureType": "road.local",
-                "elementType": "all",
-                "stylers": [
-                    {
-                        "visibility": "off"
                     }
                 ]
             },
