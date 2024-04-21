@@ -761,10 +761,10 @@ section.contacts .contact-person .title{
 
 
 section.contacts .contact-person .avatar{
-    border-radius: .5rem;
-    width: 8rem;
+    border-radius: 5rem;
+    width: 9rem;
     overflow: hidden;
-    border: .1rem solid #fff;
+    border: .1rem solid #4b5867;
 }
 
 section.contacts .contact-person .avatar img{

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             button.addEventListener('click', function() {
                 if (/Mobi|Android/i.test(navigator.userAgent)) {
                     // Mobile device detected, initiate a call
-                    window.location.href = 'tel:0898 271 010'; // Replace +1234567890 with your phone number
+                    window.location.href = 'tel:0896840077'; // Replace +1234567890 with your phone number
                 } else {
                     // Scroll to the element with ID 'dd'
                     document.getElementById('dd').scrollIntoView({
