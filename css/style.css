@@ -731,7 +731,12 @@ section.contacts form textarea{
 }
 
 section.contacts form{
-    color: white;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: .8rem;
+    color: #dcf1c5;
 }
 
 section.contacts .contact-person{

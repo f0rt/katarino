@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/photoswipe/dist/photoswipe.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/bg.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMWKYLEYFV"></script>
     <script>
@@ -529,7 +533,9 @@
                   <div class="title">РЕЗЕРВИРАЙ ПРЕЗ ФОРМАТА</div>
                   <input type="email" name="email" placeholder="Email*" required/>
                   <input type="tel" pattern="\d*" name="phone" placeholder="Телефон*" title="Моля използвайте само цифри в полето за телефон." required/>
-                  <textarea name="message" rows="10" placeholder="Моля напишете датите, на които желаете да резервирате вилата. Ние ще се свържем с вас, за да потвърдим резервацията." required></textarea>
+                  <input type="text" pattern="[0-9\-]+" name="checkin" id="checkin" placeholder="Настаняване*" autocomplete="off" title="Моля изберете валидна дата." required>
+                  <input type="text" pattern="[0-9\-]+" name="checkout" id="checkout" placeholder="Напускане*" autocomplete="off" title="Моля изберете валидна дата." required>
+                  <div>Моля, попълнете формата и натиснете бутона "Изпрати". Ние ще се свържем с вас за да потвърдим резервацията.</div>
                   <button class="gray cta-button" id="my-form-button"><img src="/img/icon/send.svg"></imng>Изпрати</button>
                   <p id="form-status"></p>
                 </form>
@@ -565,6 +571,39 @@
                       });
                     }
                     form.addEventListener("submit", handleSubmit);
+
+                    moment.locale('bg');
+
+                    var picker = new Pikaday({
+                        field: document.getElementById('checkin'),
+                        format: 'YYYY-MM-DD',
+                        firstDay: 1,
+                        i18n: {
+                            previousMonth: 'Предишен месец',
+                            nextMonth: 'Следващ месец',
+                            months: ['Януари', 'Февруари', 'Март', 'Април', 'Май', 'Юни', 'Юли', 'Август', 'Септември', 'Октомври', 'Ноември', 'Декември'],
+                            weekdays: ['Неделя', 'Понеделник', 'Вторник', 'Сряда', 'Четвъртък', 'Петък', 'Събота'],
+                            weekdaysShort: ['Нед', 'Пон', 'Вто', 'Сря', 'Чет', 'Пет', 'Съб']
+                        },
+                        toString(date, format) {
+                            return moment(date).format(format);
+                        }
+                    });
+                    var picker = new Pikaday({
+                        field: document.getElementById('checkout'),
+                        format: 'YYYY-MM-DD',
+                        firstDay: 1,
+                        i18n: {
+                            previousMonth: 'Предишен месец',
+                            nextMonth: 'Следващ месец',
+                            months: ['Януари', 'Февруари', 'Март', 'Април', 'Май', 'Юни', 'Юли', 'Август', 'Септември', 'Октомври', 'Ноември', 'Декември'],
+                            weekdays: ['Неделя', 'Понеделник', 'Вторник', 'Сряда', 'Четвъртък', 'Петък', 'Събота'],
+                            weekdaysShort: ['Нед', 'Пон', 'Вто', 'Сря', 'Чет', 'Пет', 'Съб']
+                        },
+                        toString(date, format) {
+                            return moment(date).format(format);
+                        }
+                    });
                 </script>
           </section>
         </main>
