@@ -550,6 +550,7 @@
                         if (response.ok) {
                           status.innerHTML = "Съобщението е изпратено успешно.";
                           form.reset()
+                          gtag('event', 'send_katarino', {'event_category': 'Contact', 'event_label': 'Send-Message'});
                         } else {
                           response.json().then(data => {
                             if (Object.hasOwn(data, 'errors')) {
@@ -562,15 +563,11 @@
                       }).catch(error => {
                         status.innerHTML = "Има проблем с изпращането на съобщението!"
                       });
-                        
-                      gtag('event', 'send_katarino', {'event_category': 'Contact', 'event_label': 'Send-Message'});
                     }
                     form.addEventListener("submit", handleSubmit);
                 </script>
-
           </section>
         </main>
     </div>
-
 </body>
 </html>
