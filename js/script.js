@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
                 // Track the event with Google Analytics
-                gtag('event', 'cta', {'event_category': 'CTA', 'event_label': 'CTA'});
+                gtag('event', 'cta_katarino', {'event_category': 'CTA', 'event_label': 'CTA'});
             });
         }
     });
