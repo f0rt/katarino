@@ -32,6 +32,31 @@ document.addEventListener('DOMContentLoaded', function() {
         gtag('event', 'view_rooms', {'event_category': 'Map', 'event_label': 'View-Rooms'});
     });
 
+    // Get all elements with the class name 'booking'
+    var bookingElements = document.getElementsByClassName('booking');
+
+    // Loop through each element and attach the click event listener
+    for (var i = 0; i < bookingElements.length; i++) {
+        bookingElements[i].addEventListener('click', function() {
+            gtag('event', 'booking-cta', {
+                'event_category': 'booking.com',
+                'event_label': 'booking.com'
+            });
+        });
+    }
+
+    // Get all elements with the class name 'airbnb'
+    var airbnbElements = document.getElementsByClassName('airbnb');
+
+    // Loop through each element and attach the click event listener
+    for (var i = 0; i < airbnbElements.length; i++) {
+        airbnbElements[i].addEventListener('click', function() {
+            gtag('event', 'airbnb-cta', {
+                'event_category': 'airbnb',
+                'event_label': 'airbnb'
+            });
+        });
+    }
       
 
     new Splide(".splide-header",{

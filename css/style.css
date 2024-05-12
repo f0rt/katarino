@@ -701,7 +701,6 @@ section.contacts form{
     gap: 1rem;
     background-color: #83a360;
     flex-grow: 1;
-    height: 25rem;
     padding: 2rem;
 }
 
@@ -785,6 +784,49 @@ section.contacts .contact-person .icon-info{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+                    
+.cta-booking-full{
+    display: flex;
+    width: 11rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: .3rem;
+    padding: .8rem .5rem;
+    border: 1px solid #4b5867;
+}
+
+.cta-booking-full img{
+    width: 8rem;
+}
+
+.cta-airbnb-full{
+    display: flex;
+    width: 11rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: .3rem;
+    padding: .67rem .1rem;
+    border: 1px solid #4b5867;
+}
+
+.cta-booking-full.bot{
+    background-color: white;
+}
+
+.cta-airbnb-full.bot{
+    background-color: white;
+}
+
+.cta-airbnb-full img{
+    width:5rem;
+}
+
+.cta-hero{
+    background-color: rgba(244, 78, 33, .8);
+    border: .1rem solid  #F44E21;
 }
 
 @media (min-width: 40rem) {

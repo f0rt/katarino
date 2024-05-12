@@ -61,11 +61,15 @@
                     <li>ГОСТИ 8</li>
                 </ul>
                 <div class="cta-container">
-                    <div class="price"> 395 лв./ден</div>
-                    <button class="cta-button" onclick="">Резервирай!</button>
+                    <div class="price"> 450 лв./ден</div>
+                    <button class="cta-button cta-hero" onclick="">Резервирай!</button>
                 </div>
                 <div class="address"><img src="img/icon/marker.svg"/>Катарино СПА (до Банско)</div>
-                <div class="phone"><img src="img/icon/phone.svg"/>0896840077</div>
+                <div class="phone">
+                    <a class="booking cta-booking" href="https://www.booking.com/hotel/bg/vista-villa-at-katarino-spa.bg.html" target="_blank"><img src="img/icon/booking-flat copy.svg"></a>
+                    <a class="airbnb cta-airbnb" href="https://airbnb.com/h/vista-villa-katarino" target="_blank"><img src="img/icon/airbnb-flat copy.svg"></a>
+                    <img src="img/icon/phone.svg"/>0896840077
+                </div>
             </div>
         </header>
         <main>
@@ -114,8 +118,12 @@
              
             </section>
             <section class="content cta">
-                <button id="room_button" class="cta-button gray">Виж стаите</button>
+                
                 <button class="cta-button">Резервирай!</button>
+                <a class="booking cta-booking-full" href="https://www.booking.com/hotel/bg/vista-villa-at-katarino-spa.bg.html" target="_blank"><img src="img/icon/booking-transparent.png"></a>
+                <a  class="airbnb cta-airbnb-full" href="https://airbnb.com/h/vista-villa-katarino" target="_blank"><img src="img/icon/airbnb_transparent.svg"></a>
+                <button id="room_button" class="cta-button gray">Виж стаите</button>
+                
             </section>
             
             <section class="location">
@@ -354,6 +362,8 @@
             </section>
             <section class="content cta">
                 <button class="cta-button">Резервирай!</button>
+                <a class="booking cta-booking-full" href="https://www.booking.com/hotel/bg/vista-villa-at-katarino-spa.bg.html" target="_blank"><img src="img/icon/booking-transparent.png"></a>
+                <a  class="airbnb cta-airbnb-full" href="https://airbnb.com/h/vista-villa-katarino" target="_blank"><img src="img/icon/airbnb_transparent.svg"></a>
             </section>
             <section class="floorplan">
                 <div class="splide splide-katarino">
@@ -521,23 +531,24 @@
           </section>
           <section class="content contacts">
                 <div id="dd" class="contact-person">
-                    <div class="title">РЕЗЕРВИРАЙ ПО ТЕЛЕФОНА</div>
+                    <div class="title">ДИРЕКТНА РЕЗЕРВАЦИЯ</div>
                     <div class="avatar"><img src="/img/pic/dd.jpg"></div>
                     <div clas="name">Миряна</div>
                     <div clas="name">(домакин)</div>
                     <button class="cta-button"><div class="icon-info"><img class="icon" src="img/icon/phone.svg"/>0896840077</div></button>
-                    
-                    
+                    <a class="booking cta-booking-full bot" href="https://www.booking.com/hotel/bg/vista-villa-at-katarino-spa.bg.html" target="_blank"><img src="img/icon/booking-transparent.png"></a>
+                  <a  class="airbnb cta-airbnb-full bot" href="https://airbnb.com/h/vista-villa-katarino" target="_blank"><img src="img/icon/airbnb_transparent.svg"></a>
                 </div>
                 <form id="form" action="https://formspree.io/f/xwkgannp" method="POST">
-                  <div class="title">РЕЗЕРВИРАЙ ПРЕЗ ФОРМАТА</div>
+                  <div class="title">ЗАЯВКА ЗА РЕЗЕРВАЦИЯ</div>
                   <input type="email" name="email" placeholder="Email*" required/>
                   <input type="tel" pattern="\d*" name="phone" placeholder="Телефон*" title="Моля използвайте само цифри в полето за телефон." required/>
                   <input type="text" pattern="[0-9\-]+" name="checkin" id="checkin" placeholder="Настаняване*" autocomplete="off" title="Моля изберете валидна дата." readonly required>
                   <input type="text" pattern="[0-9\-]+" name="checkout" id="checkout" placeholder="Напускане*" autocomplete="off" title="Моля изберете валидна дата." readonly required>
                   <div>Моля, попълнете формата и натиснете бутона "Изпрати". Ние ще се свържем с вас за да потвърдим резервацията.</div>
-                  <button class="gray cta-button" id="my-form-button"><img src="/img/icon/send.svg"></imng>Изпрати</button>
+                  <button class="gray cta-button" id="my-form-button"><img src="/img/icon/send.svg"></img>Изпрати</button>
                   <p id="form-status"></p>
+                 
                 </form>
 
                 <script>
